@@ -1,0 +1,17 @@
+use ExtUtils::MakeMaker;
+
+
+WriteMakefile(
+    'NAME'	    => 'WWW::Mechanize',
+    'VERSION_FROM'  => 'lib/WWW/Mechanize.pm', # finds $VERSION
+    'ABSTRACT_FROM' => 'lib/WWW/Mechanize.pm', # retrieve abstract from module
+    'AUTHOR'	    => 'Andy Lester <andy@petdance.com>',
+    'PREREQ_PM'	    => { # e.g., Module::Name => 1.1
+			LWP::UserAgent	    => 1.80,
+                        HTTP::Request	    => 1.20,
+                        HTML::Form	    => 0.03,
+                        HTML::TokeParser    => 2.20,
+                        Clone		    => 0.13,
+                        Test::More	    => 0.34,
+			},
+);
